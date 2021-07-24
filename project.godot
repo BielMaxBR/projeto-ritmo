@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "BaseNote",
+"language": "GDScript",
+"path": "res://addons/BaseNote/Note.gd"
+} ]
+_global_script_class_icons={
+"BaseNote": ""
+}
+
 [application]
 
 config/name="ciclos"
-run/main_scene="res://Root.tscn"
+run/main_scene="res://scenes/Root.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "BaseNote" )
 
 [rendering]
 
