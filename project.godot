@@ -8,29 +8,50 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "BaseNote",
-"language": "GDScript",
-"path": "res://addons/BaseNote/Note.gd"
-} ]
-_global_script_class_icons={
-"BaseNote": ""
-}
-
 [application]
 
-config/name="ciclos"
+config/name="projeto-ritmo"
 run/main_scene="res://scenes/Root.tscn"
+run/disable_stderr=true
+run/flush_stdout_on_print=true
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+
+[debug]
+
+settings/profiler/max_functions=8192
+
+[display]
+
+window/vsync/use_vsync=false
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
 enabled=PoolStringArray( "BaseNote" )
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[node]
+
+name_casing=1
+
+[physics]
+
+2d/thread_model=2
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/shadows/filter_mode=0
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
 environment/default_environment="res://default_env.tres"
