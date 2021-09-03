@@ -17,9 +17,9 @@ run/flush_stdout_on_print=true
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
-[debug]
+[autoload]
 
-settings/profiler/max_functions=8192
+CicleManager="*res://scenes/CicleManager.tscn"
 
 [display]
 

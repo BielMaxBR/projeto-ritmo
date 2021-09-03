@@ -38,4 +38,3 @@ func _oitava():
 		batida = 0
 
 	emit_signal("oitava", oitava)
-	print(oitava)
