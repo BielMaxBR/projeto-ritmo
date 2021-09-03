@@ -26,10 +26,6 @@ settings/profiler/max_functions=8192
 window/vsync/use_vsync=false
 window/stretch/aspect="keep"
 
-[editor_plugins]
-
-enabled=PoolStringArray( "BaseNote" )
-
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
