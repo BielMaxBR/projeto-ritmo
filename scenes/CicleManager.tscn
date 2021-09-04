@@ -8,4 +8,4 @@ script = ExtResource( 1 )
 [node name="timer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="timer" to="." method="_oitava"]
+[connection signal="timeout" from="timer" to="." method="_quarta"]
