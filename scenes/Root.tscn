@@ -1,23 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Objects/Objeto_Estranho.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="Root" type="Node2D"]
 
 [node name="GUI" parent="." instance=ExtResource( 2 )]
-margin_left = 16.2496
-margin_top = 6.13549
-margin_right = 56.2496
-margin_bottom = 46.1355
 
 [node name="Objeto_Estranho" parent="." instance=ExtResource( 1 )]
 position = Vector2( 287.704, 188.775 )
 
-[node name="icon2" type="Sprite" parent="Objeto_Estranho"]
-position = Vector2( 205.438, 140.954 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 640, 64 )
+[node name="camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
