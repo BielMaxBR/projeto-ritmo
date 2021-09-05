@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Objeto_Estranho.tscn" type="PackedScene" id=1]
+
+[node name="Game" type="Node2D"]
+
+[node name="colorRect" type="ColorRect" parent="."]
+margin_right = 445.0
+margin_bottom = 287.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objeto_Estranho" parent="." instance=ExtResource( 1 )]
+position = Vector2( 124.794, 97.3078 )
+
+[node name="camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true

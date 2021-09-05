@@ -23,15 +23,38 @@ CicleManager="*res://scenes/CicleManager.tscn"
 
 [display]
 
-window/size/width=640
-window/size/height=360
+window/size/width=438
+window/size/height=246
 window/size/resizable=false
-window/size/test_width=1280
-window/size/test_height=720
+window/size/test_width=848
+window/size/test_height=480
 window/vsync/use_vsync=false
 window/ios/hide_home_indicator=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": true,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 1,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
 
 [input_devices]
 

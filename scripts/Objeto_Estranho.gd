@@ -6,4 +6,5 @@ func _ready():
 	manager.connect("quarta", self, "_hit")
 
 func _hit(val):
-	$Song.play()
+	#$Song.play()
+	pass
