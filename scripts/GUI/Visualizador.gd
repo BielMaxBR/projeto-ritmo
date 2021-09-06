@@ -11,7 +11,7 @@ func _ready():
 	create_beats(manager.disco)
 
 func _hit(val):
-	beat(val)
+	_beat(val)
 
 func create_beats(tamanho):
 	for i in range(0,tamanho):
@@ -24,7 +24,7 @@ func create_beats(tamanho):
 		add_child(sprite)
 	pass
 
-func beat(val):
+func _beat(val):
 	for i in range(0, manager.disco):
 		var sprite = get_node(str(i))
 		

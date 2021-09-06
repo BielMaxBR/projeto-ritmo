@@ -12,9 +12,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Objeto_Estranho" parent="." instance=ExtResource( 1 )]
-position = Vector2( 124.794, 97.3078 )
-
 [node name="camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
+
+[node name="Objeto_Estranho" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136.781, 88.7029 )

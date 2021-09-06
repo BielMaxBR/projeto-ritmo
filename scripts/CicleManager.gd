@@ -16,8 +16,8 @@ func _ready():
 	$timer.wait_time = delay
 	$timer.start()
 	
-	emit_signal("quarta", quarta)
 	emit_signal("batida", batida)
+	emit_signal("quarta", quarta)
 
 func _quarta():
 	quarta += 1

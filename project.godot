@@ -12,8 +12,6 @@ config_version=4
 
 config/name="projeto-ritmo"
 run/main_scene="res://scenes/Root.tscn"
-run/disable_stderr=true
-run/flush_stdout_on_print=true
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
