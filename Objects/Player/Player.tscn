@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://sprites/Robozinho_Spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Player/HandManager.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 2
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 2
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 2
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 2
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 5.75314, 8.07417 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )
+
+[node name="HandManager" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="position1" type="StaticBody2D" parent="HandManager"]
+position = Vector2( 4.56378, 1.38898 )
+
+[node name="position2" type="StaticBody2D" parent="HandManager"]
+position = Vector2( -5.5559, 0.396847 )
+
+[node name="position3" type="StaticBody2D" parent="HandManager"]
+position = Vector2( 4.46457, -7.34173 )
+
+[node name="position4" type="StaticBody2D" parent="HandManager"]
+position = Vector2( -2.18268, -8.92913 )
+
+[node name="pinJoint1" type="PinJoint2D" parent="HandManager"]
+position = Vector2( 4.46456, 1.38898 )
+scale = Vector2( 0.2, 0.2 )
+softness = 0.7
+
+[node name="pinJoint2" type="PinJoint2D" parent="HandManager"]
+position = Vector2( -5.5559, 0.496062 )
+scale = Vector2( 0.2, 0.2 )
+softness = 1.0
+
+[node name="pinJoint3" type="PinJoint2D" parent="HandManager"]
+position = Vector2( 4.41496, -7.29212 )
+scale = Vector2( 0.2, 0.2 )
+softness = 1.2
+
+[node name="pinJoint4" type="PinJoint2D" parent="HandManager"]
+position = Vector2( -2.18268, -8.82992 )
+scale = Vector2( 0.2, 0.2 )
+softness = 2.0
