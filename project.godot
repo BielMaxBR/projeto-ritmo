@@ -21,11 +21,8 @@ CicleManager="*res://scenes/CicleManager.tscn"
 
 [display]
 
-window/size/width=438
-window/size/height=246
-window/size/resizable=false
-window/size/test_width=848
-window/size/test_height=480
+window/size/width=320
+window/size/height=180
 window/vsync/use_vsync=false
 window/ios/hide_home_indicator=false
 window/stretch/mode="viewport"

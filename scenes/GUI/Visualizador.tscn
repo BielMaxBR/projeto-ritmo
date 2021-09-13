@@ -2,8 +2,8 @@
 
 [ext_resource path="res://scripts/GUI/Visualizador.gd" type="Script" id=1]
 
-[node name="Visualizer" type="Control"]
+[node name="Visualizer" type="GridContainer"]
+margin_right = 32.0
+margin_bottom = 8.0
+columns = 4
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
