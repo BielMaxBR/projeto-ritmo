@@ -8,16 +8,13 @@ export var jump_force = 216
 func _ready():
 	pass
 
-func input():
+func input_movement():
 	vel.x = 0
 	
 	var stopJump = Input.is_action_just_released('jump')
-	#var desfire = Input.is_action_just_released('fire')
 	var jump = Input.is_action_just_pressed('jump')
-	#var fire = Input.is_action_just_pressed('fire')
-	var right = Input.is_action_pressed('right')
-	var left = Input.is_action_pressed('left')
-	var down = Input.is_action_pressed('down')
+	var right = Input.get_action_strength('right')
+	var left = Input.get_action_strength('left')
 
 	if is_on_floor():
 		vel.y = 0
@@ -25,11 +22,11 @@ func input():
 		vel.y = -jump_force
 	if stopJump and not is_on_floor() and vel.y < 0:
 		vel.y /= 3
-	
+
 	vel.x = speed * (right - left)
 	
 func _physics_process(delta):
-	input()
+	input_movement()
 	vel.y += gravity * delta
 	
 	move_and_slide(vel,Vector2.UP)

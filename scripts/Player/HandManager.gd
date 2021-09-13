@@ -14,4 +14,10 @@ func _ready():
 		
 		pin.set_node_a(hand.get_path())
 		pin.set_node_b(position2d.get_path())
-		
+
+
+func _process(delta):
+	var slot1 = Input.is_action_just_pressed("slot1")
+	var slot2 = Input.is_action_just_pressed("slot2")
+	var slot3 = Input.is_action_just_pressed("slot3")
+	var slot4 = Input.is_action_just_pressed("slot4")
