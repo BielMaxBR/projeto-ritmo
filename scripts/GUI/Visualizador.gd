@@ -1,14 +1,11 @@
 extends Control
 
-onready var manager = get_node('/root/CicleManager')
-
 const beat = preload("res://sprites/beat.png")
 const empty = preload("res://sprites/empty.png")
 
-
 func _ready():
-	manager.connect("quarta", self, "_hit")
-	create_beats(manager.disco)
+	CicleManager.connect("quarta", self, "_hit")
+	create_beats(CicleManager.disco)
 
 func _hit(val):
 	_beat(val)
@@ -20,12 +17,11 @@ func create_beats(tamanho):
 		sprite.centered = false
 		sprite.position.x = empty.get_size().x * i
 		sprite.name = str(i)
-		print(i)
 		add_child(sprite)
 	pass
 
 func _beat(val):
-	for i in range(0, manager.disco):
+	for i in range(0, CicleManager.disco):
 		var sprite = get_node(str(i))
 		
 		if i == val:

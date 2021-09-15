@@ -14,7 +14,6 @@ signal batida
 
 func _ready():
 	$timer.wait_time = delay
-	$timer.start()
 	
 	emit_signal("batida", batida)
 	emit_signal("quarta", quarta)
@@ -27,7 +26,7 @@ func _quarta():
 		batida += 1
 		emit_signal("batida", batida)
 	
-	if batida == 4: 
+	if quarta % 4 == 0:
 		batida = 0
 
 	emit_signal("quarta", quarta)

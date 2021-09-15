@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/GUI/Visualizador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Game.tscn" type="PackedScene" id=2]
 
 [node name="GUI" type="Control"]
@@ -9,12 +8,6 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Visualizer" parent="." instance=ExtResource( 1 )]
-margin_left = 6.23628
-margin_top = 6.90446
-margin_right = 6.23628
-margin_bottom = 6.90446
 
 [node name="viewportContainer" type="ViewportContainer" parent="."]
 anchor_left = 0.5

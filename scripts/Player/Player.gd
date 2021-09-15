@@ -6,7 +6,7 @@ export var gravity = 450
 export var jump_force = 216
 
 func _ready():
-	pass
+	PlayerValues.playerParent = get_parent().get_path()
 
 func input_movement():
 	vel.x = 0
@@ -28,5 +28,6 @@ func input_movement():
 func _physics_process(delta):
 	input_movement()
 	vel.y += gravity * delta
-	
+
 	move_and_slide(vel,Vector2.UP)
+	pass

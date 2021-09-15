@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-onready var manager = get_node('/root/CicleManager')
-
 var velocity = Vector2(1,1)
 var direction = 1
 var speed = 120
@@ -9,7 +7,7 @@ var speed = 120
 var move = Vector2.ZERO
 
 func _ready():
-	manager.connect("quarta", self, "_hit")
+	CicleManager.connect("quarta", self, "_hit")
 
 func _hit(val):
 	$tween.interpolate_property(self, "move",

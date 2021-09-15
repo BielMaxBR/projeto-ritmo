@@ -8,25 +8,50 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://scripts/Classes/Projectile.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://scripts/Classes/Weapon.gd"
+} ]
+_global_script_class_icons={
+"Projectile": "",
+"Weapon": ""
+}
+
 [application]
 
 config/name="projeto-ritmo"
+config/description="é foda"
 run/main_scene="res://scenes/Root.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://icon.png"
+config/icon="res://sprites/tilemaps/test.png"
 
 [autoload]
 
+IntegerResolutionHandler="*res://addons/integer_resolution_handler/integer_resolution_handler.gd"
 CicleManager="*res://scenes/CicleManager.tscn"
+PlayerValues="*res://scenes/PlayerValues.tscn"
+Invoke="*res://scripts/autoload/Invoke.gd"
 
 [display]
 
-window/size/width=320
-window/size/height=180
+window/integer_resolution_handler/base_width=256
+window/integer_resolution_handler/base_height=128
+window/size/width=640
+window/size/height=360
 window/vsync/use_vsync=false
-window/ios/hide_home_indicator=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/integer_resolution_handler/plugin.cfg" )
 
 [importer_defaults]
 
@@ -39,7 +64,7 @@ texture={
 "detect_3d": true,
 "flags/anisotropic": false,
 "flags/filter": false,
-"flags/mipmaps": false,
+"flags/mipmaps": true,
 "flags/repeat": 1,
 "flags/srgb": 2,
 "process/HDR_as_SRGB": false,
@@ -99,29 +124,16 @@ slot4={
  ]
 }
 
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
-
-[node]
-
-name_casing=1
-
 [physics]
 
-2d/thread_model=2
 2d/default_gravity_vector=Vector2( 0, 0 )
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
-quality/intended_usage/framebuffer_allocation=0
-quality/intended_usage/framebuffer_allocation.mobile=0
+2d/snapping/use_gpu_pixel_snap=true
 threads/thread_model=2
-vram_compression/import_etc=true
-vram_compression/import_etc2=false
 quality/shadows/filter_mode=0
-quality/reflections/texture_array_reflections=false
-quality/reflections/high_quality_ggx=false
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

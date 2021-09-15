@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Robozinho_Spritesheet.png-6a60eefad36b8312a7a1365e590e507d.stex"
+path="res://.import/Lemon.png-31fefc76884c84d71e0bd5fad50e8907.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Robozinho_Spritesheet.png"
-dest_files=[ "res://.import/Robozinho_Spritesheet.png-6a60eefad36b8312a7a1365e590e507d.stex" ]
+source_file="res://sprites/weapons/Lemon.png"
+dest_files=[ "res://.import/Lemon.png-31fefc76884c84d71e0bd5fad50e8907.stex" ]
 
 [params]
 
