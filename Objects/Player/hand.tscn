@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/Player/hand.gd" type="Script" id=2]
-[ext_resource path="res://Objects/Weapons/Lemon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Weapons/LemonShot.tscn" type="PackedScene" id=3]
 
 [node name="Hand" type="RigidBody2D" groups=[
 "Hands",

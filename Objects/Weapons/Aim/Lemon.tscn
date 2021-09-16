@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/weapons/aim/Lemon.gd" type="Script" id=1]
 [ext_resource path="res://sprites/weapons/aim/Lemon.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Deleter.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -9,7 +10,7 @@ height = 1.0
 
 [node name="LemonBullet" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 80.0
+speed = 130.0
 damage = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -21,3 +22,5 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="Deleter" parent="." instance=ExtResource( 3 )]
