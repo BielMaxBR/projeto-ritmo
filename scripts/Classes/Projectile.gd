@@ -17,7 +17,15 @@ func _ready():
 		printerr("o nó ", self.name, " não possui o Node 'Area2D'")
 
 func _hit(body):
+	if body is TileMap:
+		if self.has_method("_delete"):
+			self.call("_delete")
+		else: self.queue_free()
+
 	if body.is_in_group(EnemyGroup):
 		if body.has_method("getDamage"):
 			body.getDamage(damage)
-			self.queue_free()
+			
+			if self.has_method("_delete"):
+				self.call("_delete")
+			else: self.queue_free()

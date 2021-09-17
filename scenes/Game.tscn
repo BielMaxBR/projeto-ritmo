@@ -504,12 +504,16 @@ current = true
 [node name="ySort" type="YSort" parent="."]
 
 [node name="Hand1" parent="ySort" instance=ExtResource( 3 )]
+id = 1
 
 [node name="Hand2" parent="ySort" instance=ExtResource( 3 )]
+id = 2
 
 [node name="Hand3" parent="ySort" instance=ExtResource( 3 )]
+id = 3
 
 [node name="Hand4" parent="ySort" instance=ExtResource( 3 )]
+id = 4
 
 [node name="Player" parent="ySort" instance=ExtResource( 2 )]
 position = Vector2( 23.1286, 52.5437 )

@@ -10,7 +10,7 @@ height = 1.0
 
 [node name="LemonBullet" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 130.0
+speed = 150.0
 damage = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]

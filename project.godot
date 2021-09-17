@@ -38,6 +38,7 @@ IntegerResolutionHandler="*res://addons/integer_resolution_handler/integer_resol
 CicleManager="*res://scenes/CicleManager.tscn"
 PlayerValues="*res://scenes/PlayerValues.tscn"
 Invoke="*res://scripts/autoload/Invoke.gd"
+Constants="*res://scripts/constants.gd"
 
 [display]
 

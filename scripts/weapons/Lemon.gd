@@ -5,7 +5,6 @@ func _ready():
 	beats["1"] = "shot"
 	beats["2"] = "shot"
 	beats["3"] = "shot"
-	disable = false
 
 func shot():
 	get_parent().apply_central_impulse(Vector2.LEFT*PlayerValues.direction*150)
