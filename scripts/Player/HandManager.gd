@@ -16,6 +16,6 @@ func _ready():
 func _process(delta):
 	for i in range(1, 5):
 		if Input.is_action_just_pressed("slot" + str(i)):
-			PlayerValues.emit_signal("toggleSlot" + str(i))
+			PlayerValues.toggleSlot(i)
 
 	scale.x = PlayerValues.direction

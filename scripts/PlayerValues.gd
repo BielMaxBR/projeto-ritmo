@@ -1,22 +1,16 @@
 extends Node
 
-var slot1 = "Lemon" setget _slot1
-var slot2 = null setget _slot2
-var slot3 = null setget _slot3
-var slot4 = null setget _slot4
 
-signal slot1(value)
-signal slot2(value)
-signal slot3(value)
-signal slot4(value)
+var inventory: Dictionary = {
+	"slot1": "Lemon",
+	"slot2": null,
+	"slot3": null,
+	"slot4": null,
+}# setget _set_inventory
 
-signal toggleSlot1
-signal toggleSlot2
-signal toggleSlot3
-signal toggleSlot4
+signal slot(value)
 
 export(int) var life := 10
-
 export(NodePath) var playerParent
 
 var direction := 1
@@ -26,15 +20,18 @@ func _process(delta):
 	if input != 0:
 		direction = input
 
-func _slot1(value):
-	emit_signal("slot1", value)
+func setSlot(id: int, value: String):
+	inventory["slot"+str(id)] = value
+	var data: String = value
 	
-func _slot2(value):
-	emit_signal("slot2", value)
-	
-func _slot3(value):
-	emit_signal("slot3", value)
-	
-func _slot4(value):
-	emit_signal("slot4", value)
+	self.emit_signal("slot", {
+		"type": Constants.signals.change,
+		"id": id,
+		"data": data
+	})
 
+func toggleSlot(id: int):
+	self.emit_signal("slot", {
+		"type": Constants.signals.toggle,
+		"id": id,
+	})
