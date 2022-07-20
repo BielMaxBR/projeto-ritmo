@@ -2,7 +2,7 @@
 ###### "Um portal para um submundo musical se abriu, e você tem o trabalho de controlar um robozinho e analizar esse novo mundo harmonicamente caótico, enquanto tenta sobreviver claro 
 
 ## Definições gerais
-`2D` `scroll view` `ação` `flat` `boss fight` `Rhythm` `rythm`
+`2D` `scroll view` `ação` `flat` `boss fight` `musical` `rythm`
 
 #### Ambição
 _"O meu que desejo com esse projeto é, um jogo desafiador de plataforma em que o mundo é uma trilha sonora viva"_
